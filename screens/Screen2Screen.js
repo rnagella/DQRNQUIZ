@@ -1,5 +1,7 @@
 // @flow
-import React, {
+const React = require('React');
+
+import {
   Component
 } from 'react';
 /* Components */
@@ -16,9 +18,9 @@ export default class Screen2Screen extends React.Component {
   }
 
   render() {
-    return ( 
+    return (
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-        <Text>Screen2Screen! </Text> 
+        <Text>Screen2Screen! </Text>
       </View>
     );
   }
