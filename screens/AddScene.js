@@ -31,7 +31,12 @@ export default class AddScene extends React.Component {
 
   _goToAbout = () => {
     this.props.navigator.push(Router.getRoute('about', {
-      name: 'BeckMartin'
+      name: 'Beck Martin',
+      posts: 95,
+      followers: 387,
+      following: 407,
+      location: 'Los Angeles, CA',
+      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
     }));
   }
 }

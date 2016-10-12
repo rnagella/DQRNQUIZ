@@ -41,9 +41,15 @@ export default class AboutScene extends React.Component {
   }
 
   componentDidMount() {
+    // In case we want to update the data once we fetch from server
     setTimeout(() => {
       this.props.navigator.updateCurrentRouteParams({
-        name: this.props.route.params.name
+        name: this.props.route.params.name,
+        posts: this.props.route.params.posts,
+        followers: this.props.route.params.followers,
+        following: this.props.route.params.following,
+        location: this.props.route.params.location,
+        description: this.props.route.params.description
       });
     }, 1000);
   }
@@ -73,15 +79,15 @@ export default class AboutScene extends React.Component {
       <View style={styles.container} >
         <View style = {styles.stats} >
           <View style = {{alignItems: 'center'}} >
-            <Text style = {{fontSize: 18, fontWeight: '400'}}>95</Text>
+            <Text style = {{fontSize: 18, fontWeight: '400'}}>{this.props.posts}</Text>
             <Text style = {{fontSize: 8}} > POSTS </Text>
           </View>
           <View style = {{alignItems: 'center'}} >
-            <Text style={{fontSize: 18, fontWeight: '400'}}> 387 </Text>
+            <Text style={{fontSize: 18, fontWeight: '400'}}>{this.props.followers}</Text>
             <Text style={{fontSize: 8}}> FOLLOWERS </Text>
           </View>
           <View style={{alignItems: 'center'}} >
-            <Text style = {{fontSize: 18, fontWeight: '400' }} > 407 </Text>
+            <Text style = {{fontSize: 18, fontWeight: '400' }} >{this.props.following}</Text>
             <Text style = {{fontSize: 8}} > FOLLOWING </Text>
           </View>
         </View>
@@ -91,11 +97,11 @@ export default class AboutScene extends React.Component {
           {this.rightButton()}
         </View>
         <View style = {{alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}} >
-        <Text>Beck Martin</Text>
+        <Text style={{fontSize: 18, fontWeight: '400'}}>{this.props.name}</Text>
         <Text style={{padding: 10}}> | </Text>
-        <Text style={{color: '#5F9CC8'}}> <Entypo name="location-pin"/> Los Angelese, CA </Text>
+        <Text style={{color: '#5F9CC8', fontSize: 18}}> <Entypo name="location-pin" size={18}/>{this.props.location}</Text>
         </View>
-        <Text style={{padding: 10}}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Text>
+        <Text style={{padding: 20, textAlign: 'justify'}}>{this.props.description}</Text>
       </View>
     )
   }
