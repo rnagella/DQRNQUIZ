@@ -1,5 +1,8 @@
 // @flow
-import React, {
+
+const React = require('React');
+
+import {
   Component
 } from 'react';
 /* Components */
@@ -16,9 +19,9 @@ export default class Screen5Screen extends React.Component {
   }
 
   render() {
-    return ( 
+    return (
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-        <Text>Screen5Screen! </Text> 
+        <Text>Screen5Screen! </Text>
       </View>
     );
   }
