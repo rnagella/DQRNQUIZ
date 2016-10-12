@@ -1,5 +1,7 @@
+const React = require('React');
+
 // @flow
-import React, {
+import {
   Component
 } from 'react';
 /* Components */
@@ -18,10 +20,10 @@ export default class Screen3Screen extends React.Component {
   }
 
   render() {
-    return ( 
+    return (
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}} >
         <Text> Screen3Screen! </Text>
-        <Text onPress = {this._goToAbout}>Push about route </Text> 
+        <Text onPress = {this._goToAbout}>Push about route </Text>
       </View>
     );
   }
