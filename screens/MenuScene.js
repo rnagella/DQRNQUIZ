@@ -9,17 +9,17 @@ import {
   View,
 } from 'react-native';
 
-export default class Screen1Screen extends React.Component {
+export default class MenuScene extends React.Component {
   static route = {
     navigationBar: {
-      title: 'Screen1Screen',
+      title: 'Menu Scene',
     }
   }
 
   render() {
     return (
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-        <Text>Screen1Screen! </Text>
+        <Text>This is Menu Scene!</Text>
       </View>
     );
   }
