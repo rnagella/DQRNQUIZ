@@ -11,7 +11,7 @@ import ListScene from '../screens/ListScene';
 import AddScene from '../screens/AddScene';
 import ChatScene from '../screens/ChatScene';
 import ProfileScene from '../screens/ProfileScene';
-import AboutScreen from '../screens/AboutScreen';
+import AboutScene from '../screens/AboutScene';
 
 const AppRouter = createRouter(() => ({
 	menu: () => MenuScene,
@@ -19,7 +19,7 @@ const AppRouter = createRouter(() => ({
 	add: () => AddScene,
 	chat: () => ChatScene,
 	profile: () => ProfileScene,
-	about: () => AboutScreen,
+	about: () => AboutScene,
 }));
 
 export default AppRouter;

@@ -19,7 +19,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-export default class AboutScreen extends React.Component {
+export default class AboutScene extends React.Component {
   static route = {
     navigationBar: {
       title(params) {
