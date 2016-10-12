@@ -57,7 +57,7 @@ export default class AboutScene extends React.Component {
 
   leftButton() {
     return (
-      <TouchableHighlight underlayColor = "#d3d3d3" style = {[styles.button]} onPress ={() => {}}>
+      <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.button]} onPress ={() => {}}>
         <Text>
           <Icon name="commenting-o" color="#fff" size={24}/>
         </Text>
@@ -67,7 +67,7 @@ export default class AboutScene extends React.Component {
 
   rightButton() {
     return (
-      <TouchableHighlight underlayColor = "#d3d3d3" style = {[styles.userButton]} onPress = {() => {}}>
+      <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.userButton]} onPress = {() => {}}>
         <Text>
           <Icon name="user-plus" color="#fff" size={24} />
         </Text>
@@ -94,7 +94,8 @@ export default class AboutScene extends React.Component {
         </View>
         <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row'}}>
           {this.leftButton()}
-          <Image source={require('../the-circle.png')} style={{width: 88,height: 88}}/>
+          {/* <Image source={require('../the-circle.png')} style={{width: 88,height: 88}}/> */}
+          <Icon name="user" size={102} color={Colors.midGrey}/>
           {this.rightButton()}
         </View>
         <View style = {{alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}} >
@@ -138,6 +139,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#4099FF'
+    backgroundColor: Colors.navigationBarBackgroundColor
   },
 });
