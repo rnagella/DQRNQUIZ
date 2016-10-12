@@ -18,6 +18,7 @@ import {
 import Icon from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import Colors from '../constants/Colors';
 
 export default class AboutScene extends React.Component {
   static route = {
@@ -29,8 +30,8 @@ export default class AboutScene extends React.Component {
 
         return params.name ? `${params.name}` : ``;
       },
-      backgroundColor: '#5F9CC8',
-      tintColor: '#fff',
+      backgroundColor: Colors.navigationBarBackgroundColor,
+      tintColor: Colors.navigationBarTintColor,
       renderRight() {
         return (
           <TouchableOpacity style={{padding: 10}}><Ionicons name="ios-more" color="#fff" size={30}/>
@@ -56,7 +57,7 @@ export default class AboutScene extends React.Component {
 
   leftButton() {
     return (
-      <TouchableHighlight underlayColor = "gray" style = {[styles.button]} onPress ={() => {}}>
+      <TouchableHighlight underlayColor = "#d3d3d3" style = {[styles.button]} onPress ={() => {}}>
         <Text>
           <Icon name="commenting-o" color="#fff" size={24}/>
         </Text>
@@ -66,7 +67,7 @@ export default class AboutScene extends React.Component {
 
   rightButton() {
     return (
-      <TouchableHighlight underlayColor = "gray" style = {[styles.userButton]} onPress = {() => {}}>
+      <TouchableHighlight underlayColor = "#d3d3d3" style = {[styles.userButton]} onPress = {() => {}}>
         <Text>
           <Icon name="user-plus" color="#fff" size={24} />
         </Text>
@@ -128,7 +129,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'green'
+    backgroundColor: '#407643'
   },
   userButton: {
     borderWidth: 0,
@@ -137,6 +138,6 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#5F9CC8'
+    backgroundColor: '#4099FF'
   },
 });

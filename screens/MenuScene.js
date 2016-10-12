@@ -8,13 +8,14 @@ import {
   Text,
   View,
 } from 'react-native';
+import Colors from '../constants/Colors';
 
 export default class MenuScene extends React.Component {
   static route = {
     navigationBar: {
       title: 'Menu Scene',
-      backgroundColor: '#5F9CC8',
-      tintColor: '#fff',
+      backgroundColor: Colors.navigationBarBackgroundColor,
+      tintColor: Colors.navigationBarTintColor,
     }
   }
 

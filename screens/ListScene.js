@@ -9,13 +9,14 @@ import {
   Text,
   View,
 } from 'react-native';
+import Colors from '../constants/Colors';
 
 export default class ListScene extends React.Component {
   static route = {
     navigationBar: {
       title: 'List Scene',
-      backgroundColor: '#5F9CC8',
-      tintColor: '#fff',
+      backgroundColor: Colors.navigationBarBackgroundColor,
+      tintColor: Colors.navigationBarTintColor,
     }
   }
 

@@ -10,13 +10,14 @@ import {
 } from 'react-native';
 
 import Router from '../navigation/AppRouter';
+import Colors from '../constants/Colors';
 
 export default class AddScene extends React.Component {
   static route = {
     navigationBar: {
       title: 'Follow Scene',
-      backgroundColor: '#5F9CC8',
-      tintColor: '#fff',
+      backgroundColor: Colors.navigationBarBackgroundColor,
+      tintColor: Colors.navigationBarTintColor,
     },
   }
 
