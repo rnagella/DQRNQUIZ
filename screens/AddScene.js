@@ -11,18 +11,18 @@ import {
 
 import Router from '../navigation/AppRouter';
 
-export default class Screen3Screen extends React.Component {
+export default class AddScene extends React.Component {
   static route = {
     navigationBar: {
-      title: 'Screen3Screen',
+      title: 'Follow Scene',
     }
   }
 
   render() {
     return (
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}} >
-        <Text> Screen3Screen! </Text>
-        <Text onPress = {this._goToAbout}>Push about route </Text>
+        <Text> This is Follow Scene! </Text>
+        <Text onPress = {this._goToAbout}> Click here to Follow Beck Martin!</Text>
       </View>
     );
   }
