@@ -80,16 +80,16 @@ export default class AboutScene extends React.Component {
       <View style={styles.container} >
         <View style = {styles.stats} >
           <View style = {{alignItems: 'center'}} >
-            <Text style = {{fontSize: 18, fontWeight: '400'}}>{this.props.posts}</Text>
-            <Text style = {{fontSize: 8}} > POSTS </Text>
+            <Text style = {{fontSize: 18, fontWeight: '500', color: Colors.midGrey}}>{this.props.posts}</Text>
+            <Text style = {{fontSize: 12}} > POSTS </Text>
           </View>
           <View style = {{alignItems: 'center'}} >
-            <Text style={{fontSize: 18, fontWeight: '400'}}>{this.props.followers}</Text>
-            <Text style={{fontSize: 8}}> FOLLOWERS </Text>
+            <Text style={{fontSize: 18, fontWeight: '500', color: Colors.midGrey}}>{this.props.followers}</Text>
+            <Text style={{fontSize: 12}}> FOLLOWERS </Text>
           </View>
           <View style={{alignItems: 'center'}} >
-            <Text style = {{fontSize: 18, fontWeight: '400' }} >{this.props.following}</Text>
-            <Text style = {{fontSize: 8}} > FOLLOWING </Text>
+            <Text style = {{fontSize: 18, fontWeight: '500', color: Colors.midGrey }} >{this.props.following}</Text>
+            <Text style = {{fontSize: 12}} > FOLLOWING </Text>
           </View>
         </View>
         <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row'}}>
@@ -101,9 +101,9 @@ export default class AboutScene extends React.Component {
         <View style = {{alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}} >
         <Text style={{fontSize: 18, fontWeight: '400'}}>{this.props.name}</Text>
         <Text style={{padding: 10}}> | </Text>
-        <Text style={{color: '#5F9CC8', fontSize: 18}}> <Entypo name="location-pin" size={18}/>{this.props.location}</Text>
+        <Text style={{color: Colors.navigationBarBackgroundColor, fontSize: 18}}> <Entypo name="location-pin" size={18}/>{this.props.location}</Text>
         </View>
-        <Text style={{padding: 20, textAlign: 'justify'}}>{this.props.description}</Text>
+        <Text style={{padding: 20, textAlign: 'justify', fontSize: 16}}>{this.props.description}</Text>
       </View>
     )
   }
