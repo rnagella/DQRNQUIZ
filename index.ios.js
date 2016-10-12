@@ -13,6 +13,7 @@ import {
   TouchableOpacity,
   Image,
   TouchableHighlight,
+  StatusBar
 } from 'react-native';
 /* Navigation */
 import {
@@ -33,45 +34,51 @@ function getColor(isSelected) {
   return isSelected ? '#0084FF' : 'red';
 }
 
+// StatusBar.barStyle = 'default';
+
 class DQRNQUIZ extends Component {
   render() {
       return (
-        <NavigationProvider router={Router}>
-          <TabNavigation id = "tab-navigation"
-            navigationUID = "tab-navigation"
-            initialTab = "first">
-              <TabNavigationItem id="first" selectedStyle={styles.selectedTab}
-                renderIcon={(isSelected) => <Ionicons name="ios-boat-outline" size={28} color={getColor(isSelected)} /> }
-              >
-                <StackNavigation id="MenuScene" initialRoute={Router.getRoute('menu')}/>
-              </TabNavigationItem>
-              <TabNavigationItem id="second"
-                renderIcon={(isSelected) => <Ionicons name="ios-list" size={28} color={getColor(isSelected)}/>}
-                selectedStyle = {styles.selectedTab} >
-                <StackNavigation id="ListScene" initialRoute = {Router.getRoute('list')}/>
-              </TabNavigationItem>
-              <TabNavigationItem
-                id="third"
-                selectedStyle={styles.selectedTab}
-                renderIcon={(isSelected) => <Ionicons name="ios-add" size={28} color={getColor(isSelected)}/>} >
-                  <StackNavigation id="AddScene" initialRoute={Router.getRoute('add')}/>
-              </TabNavigationItem>
-              <TabNavigationItem
-                id="fourth"
-                selectedStyle={styles.selectedTab}
-                renderIcon={(isSelected) => <Ionicons name="ios-chatboxes-outline" size={28}
-                color={getColor(isSelected)}/>} >
-                <StackNavigation id = "ChatScene"
-                  initialRoute = {Router.getRoute('chat')}/>
-              </TabNavigationItem>
-              <TabNavigationItem
-                id="fifth"
-                renderIcon={(isSelected) => <Ionicons name="ios-person-outline" size={28} color={getColor(isSelected)} /> }
-                selectedStyle={styles.selectedTab} >
-                  <StackNavigation id = "ProfileScene" initialRoute = {Router.getRoute('profile')} />
-              </TabNavigationItem>
-          </TabNavigation>
-        </NavigationProvider>
+        <View style={{flex: 1}}>
+          <StatusBar barStyle="light-content">
+          </StatusBar>
+          <NavigationProvider router={Router}>
+            <TabNavigation id = "tab-navigation"
+              navigationUID = "tab-navigation"
+              initialTab = "first">
+                <TabNavigationItem id="first" selectedStyle={styles.selectedTab}
+                  renderIcon={(isSelected) => <Ionicons name="ios-boat-outline" size={28} color={getColor(isSelected)} /> }
+                >
+                  <StackNavigation id="MenuScene" initialRoute={Router.getRoute('menu')}/>
+                </TabNavigationItem>
+                <TabNavigationItem id="second"
+                  renderIcon={(isSelected) => <Ionicons name="ios-list" size={28} color={getColor(isSelected)}/>}
+                  selectedStyle = {styles.selectedTab} >
+                  <StackNavigation id="ListScene" initialRoute = {Router.getRoute('list')}/>
+                </TabNavigationItem>
+                <TabNavigationItem
+                  id="third"
+                  selectedStyle={styles.selectedTab}
+                  renderIcon={(isSelected) => <Ionicons name="ios-add" size={28} color={getColor(isSelected)}/>} >
+                    <StackNavigation id="AddScene" initialRoute={Router.getRoute('add')}/>
+                </TabNavigationItem>
+                <TabNavigationItem
+                  id="fourth"
+                  selectedStyle={styles.selectedTab}
+                  renderIcon={(isSelected) => <Ionicons name="ios-chatboxes-outline" size={28}
+                  color={getColor(isSelected)}/>} >
+                  <StackNavigation id = "ChatScene"
+                    initialRoute = {Router.getRoute('chat')}/>
+                </TabNavigationItem>
+                <TabNavigationItem
+                  id="fifth"
+                  renderIcon={(isSelected) => <Ionicons name="ios-person-outline" size={28} color={getColor(isSelected)} /> }
+                  selectedStyle={styles.selectedTab} >
+                    <StackNavigation id = "ProfileScene" initialRoute = {Router.getRoute('profile')} />
+                </TabNavigationItem>
+            </TabNavigation>
+          </NavigationProvider>
+        </View>
       );
   }
 }
