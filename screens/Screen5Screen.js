@@ -1,7 +1,5 @@
 // @flow
-
 const React = require('React');
-
 import {
   Component
 } from 'react';
