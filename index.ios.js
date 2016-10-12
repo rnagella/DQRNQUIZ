@@ -31,7 +31,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 function getColor(isSelected) {
-  return isSelected ? '#0084FF' : 'red';
+  return isSelected ? '#0084FF' : '#000';
 }
 
 // StatusBar.barStyle = 'default';
@@ -47,32 +47,32 @@ class DQRNQUIZ extends Component {
               navigationUID = "tab-navigation"
               initialTab = "first">
                 <TabNavigationItem id="first" selectedStyle={styles.selectedTab}
-                  renderIcon={(isSelected) => <Ionicons name="ios-boat-outline" size={28} color={getColor(isSelected)} /> }
+                  renderIcon={(isSelected) => <Ionicons name="ios-boat-outline" size={34} color={getColor(isSelected)} /> }
                 >
                   <StackNavigation id="MenuScene" initialRoute={Router.getRoute('menu')}/>
                 </TabNavigationItem>
                 <TabNavigationItem id="second"
-                  renderIcon={(isSelected) => <Ionicons name="ios-list" size={28} color={getColor(isSelected)}/>}
+                  renderIcon={(isSelected) => <Ionicons name="ios-list" size={34} color={getColor(isSelected)}/>}
                   selectedStyle = {styles.selectedTab} >
                   <StackNavigation id="ListScene" initialRoute = {Router.getRoute('list')}/>
                 </TabNavigationItem>
                 <TabNavigationItem
                   id="third"
                   selectedStyle={styles.selectedTab}
-                  renderIcon={(isSelected) => <Ionicons name="ios-add" size={28} color={getColor(isSelected)}/>} >
+                  renderIcon={(isSelected) => <Ionicons name="ios-add" size={34} color={getColor(isSelected)}/>} >
                     <StackNavigation id="AddScene" initialRoute={Router.getRoute('add')}/>
                 </TabNavigationItem>
                 <TabNavigationItem
                   id="fourth"
                   selectedStyle={styles.selectedTab}
-                  renderIcon={(isSelected) => <Ionicons name="ios-chatboxes-outline" size={28}
+                  renderIcon={(isSelected) => <Ionicons name="ios-chatboxes-outline" size={34}
                   color={getColor(isSelected)}/>} >
                   <StackNavigation id = "ChatScene"
                     initialRoute = {Router.getRoute('chat')}/>
                 </TabNavigationItem>
                 <TabNavigationItem
                   id="fifth"
-                  renderIcon={(isSelected) => <Ionicons name="ios-person-outline" size={28} color={getColor(isSelected)} /> }
+                  renderIcon={(isSelected) => <Ionicons name="ios-person-outline" size={34} color={getColor(isSelected)} /> }
                   selectedStyle={styles.selectedTab} >
                     <StackNavigation id = "ProfileScene" initialRoute = {Router.getRoute('profile')} />
                 </TabNavigationItem>
@@ -85,11 +85,9 @@ class DQRNQUIZ extends Component {
 
 const styles = StyleSheet.create({
   selectedTab: {
-    borderWidth: 2,
-    borderRadius: 25,
-    height: 50,
-    width: 50,
-    borderColor: '#0084FF'
+    borderWidth: 1,
+    borderRadius: 23,
+    borderColor: '#55AADA'
   },
 });
 
