@@ -48,7 +48,7 @@ class DQRNQUIZ extends Component {
               <TabNavigationItem id="second"
                 renderIcon={(isSelected) => <Ionicons name="ios-list" size={28} color={getColor(isSelected)}/>}
                 selectedStyle = {styles.selectedTab} >
-                <StackNavigation id="Screen2Screen" initialRoute = {Router.getRoute('screen2')}/>
+                <StackNavigation id="ListScene" initialRoute = {Router.getRoute('list')}/>
               </TabNavigationItem>
               <TabNavigationItem
                 id="third"
