@@ -61,8 +61,8 @@ class DQRNQUIZ extends Component {
                 selectedStyle={styles.selectedTab}
                 renderIcon={(isSelected) => <Ionicons name="ios-chatboxes-outline" size={28}
                 color={getColor(isSelected)}/>} >
-                <StackNavigation id = "Screen4Screen"
-                  initialRoute = {Router.getRoute('screen4')}/>
+                <StackNavigation id = "ChatScene"
+                  initialRoute = {Router.getRoute('chat')}/>
               </TabNavigationItem>
               <TabNavigationItem
                 id="fifth"

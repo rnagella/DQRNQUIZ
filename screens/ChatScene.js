@@ -10,17 +10,17 @@ import {
   View,
 } from 'react-native';
 
-export default class Screen4Screen extends React.Component {
+export default class ChatScene extends React.Component {
   static route = {
     navigationBar: {
-      title: 'Screen4Screen',
+      title: 'Chat Scene',
     }
   }
 
   render() {
     return (
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-        <Text>Screen4Screen! </Text>
+        <Text>This is Chat Scene! </Text>
       </View>
     );
   }
