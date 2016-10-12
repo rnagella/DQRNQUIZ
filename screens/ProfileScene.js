@@ -9,17 +9,17 @@ import {
   View,
 } from 'react-native';
 
-export default class Screen5Screen extends React.Component {
+export default class ProfileScene extends React.Component {
   static route = {
     navigationBar: {
-      title: 'Screen5Screen',
+      title: 'Profile Scene',
     }
   }
 
   render() {
     return (
       <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
-        <Text>Screen5Screen! </Text>
+        <Text>This is Profile Scene! </Text>
       </View>
     );
   }

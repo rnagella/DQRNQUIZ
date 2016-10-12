@@ -68,7 +68,7 @@ class DQRNQUIZ extends Component {
                 id="fifth"
                 renderIcon={(isSelected) => <Ionicons name="ios-person-outline" size={28} color={getColor(isSelected)} /> }
                 selectedStyle={styles.selectedTab} >
-                  <StackNavigation id = "Screen5Screen" initialRoute = {Router.getRoute('screen5')} />
+                  <StackNavigation id = "ProfileScene" initialRoute = {Router.getRoute('profile')} />
               </TabNavigationItem>
           </TabNavigation>
         </NavigationProvider>
