@@ -1,15 +1,17 @@
 // @flow
-import React, {
+const React = require('React');
+const StyleSheet = require('StyleSheet');
+
+import {
   Component
 } from 'react';
 /* Components */
 import {
-  StyleSheet,
-  Text,
   View,
-  TouchableOpacity,
+  Text,
   Image,
   TouchableHighlight,
+  TouchableOpacity,
 } from 'react-native';
 
 /* Icons */
@@ -30,8 +32,8 @@ export default class AboutScreen extends React.Component {
       backgroundColor: '#5F9CC8',
       tintColor: '#fff',
       renderRight() {
-        return ( 
-          <TouchableOpacity style={{padding: 10}}><Ionicons name="ios-more" color="#fff" size={30}/> 
+        return (
+          <TouchableOpacity style={{padding: 10}}><Ionicons name="ios-more" color="#fff" size={30}/>
           </TouchableOpacity>
         )
       }
@@ -50,8 +52,8 @@ export default class AboutScreen extends React.Component {
     return (
       <TouchableHighlight underlayColor = "gray" style = {[styles.button]} onPress ={() => {}}>
         <Text>
-          <Icon name="commenting-o" color="#fff" size={24}/>  
-        </Text> 
+          <Icon name="commenting-o" color="#fff" size={24}/>
+        </Text>
       </TouchableHighlight>
     )
   }
@@ -60,40 +62,40 @@ export default class AboutScreen extends React.Component {
     return (
       <TouchableHighlight underlayColor = "gray" style = {[styles.userButton]} onPress = {() => {}}>
         <Text>
-          <Icon name="user-plus" color="#fff" size={24} />  
-        </Text> 
+          <Icon name="user-plus" color="#fff" size={24} />
+        </Text>
       </TouchableHighlight>
     )
   }
 
   render() {
-    return ( 
+    return (
       <View style={styles.container} >
         <View style = {styles.stats} >
           <View style = {{alignItems: 'center'}} >
-            <Text style = {{fontSize: 18, fontWeight: '400'}}>95</Text> 
-            <Text style = {{fontSize: 8}} > POSTS </Text> 
+            <Text style = {{fontSize: 18, fontWeight: '400'}}>95</Text>
+            <Text style = {{fontSize: 8}} > POSTS </Text>
           </View>
           <View style = {{alignItems: 'center'}} >
-            <Text style={{fontSize: 18, fontWeight: '400'}}> 387 </Text> 
-            <Text style={{fontSize: 8}}> FOLLOWERS </Text> 
-          </View> 
+            <Text style={{fontSize: 18, fontWeight: '400'}}> 387 </Text>
+            <Text style={{fontSize: 8}}> FOLLOWERS </Text>
+          </View>
           <View style={{alignItems: 'center'}} >
             <Text style = {{fontSize: 18, fontWeight: '400' }} > 407 </Text>
-            <Text style = {{fontSize: 8}} > FOLLOWING </Text> 
-          </View> 
+            <Text style = {{fontSize: 8}} > FOLLOWING </Text>
+          </View>
         </View>
-        <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row'}}> 
-          {this.leftButton()} 
-          <Image source={require('../the-circle.png')} style={{width: 88,height: 88}}/> 
-          {this.rightButton()} 
-        </View> 
+        <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row'}}>
+          {this.leftButton()}
+          <Image source={require('../the-circle.png')} style={{width: 88,height: 88}}/>
+          {this.rightButton()}
+        </View>
         <View style = {{alignItems: 'center', justifyContent: 'center', flexDirection: 'row'}} >
-        <Text>Beck Martin</Text> 
-        <Text style={{padding: 10}}> | </Text> 
-        <Text style={{color: '#5F9CC8'}}> <Entypo name="location-pin"/> Los Angelese, CA </Text> 
-        </View> 
-        <Text style={{padding: 10}}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Text> 
+        <Text>Beck Martin</Text>
+        <Text style={{padding: 10}}> | </Text>
+        <Text style={{color: '#5F9CC8'}}> <Entypo name="location-pin"/> Los Angelese, CA </Text>
+        </View>
+        <Text style={{padding: 10}}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </Text>
       </View>
     )
   }
