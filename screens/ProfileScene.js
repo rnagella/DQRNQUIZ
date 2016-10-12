@@ -13,6 +13,8 @@ export default class ProfileScene extends React.Component {
   static route = {
     navigationBar: {
       title: 'Profile Scene',
+      backgroundColor: '#5F9CC8',
+      tintColor: '#fff',
     }
   }
 

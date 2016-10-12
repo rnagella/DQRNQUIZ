@@ -13,6 +13,8 @@ export default class MenuScene extends React.Component {
   static route = {
     navigationBar: {
       title: 'Menu Scene',
+      backgroundColor: '#5F9CC8',
+      tintColor: '#fff',
     }
   }
 
