@@ -1,6 +1,17 @@
+// const Colors = require('Colors');
+// const Entypo = require('Entypo.react');
+// const Icon = require('Icon.react');
+// const Ionicons = require('Ionicons.react');
+// const ParallaxScrollView = require('ParallaxScrollView.react');
 // @flow
 const React = require('React');
 const StyleSheet = require('StyleSheet');
+// const Text = require('Text.react');
+// const TouchableHighlight = require('TouchableHighlight.react');
+// const TouchableOpacity = require('TouchableOpacity.react');
+// const View = require('View.react');
+
+import ParallaxScrollView from 'react-native-parallax-scroll-view';
 
 import {
   Component
@@ -105,6 +116,8 @@ export default class AboutScene extends React.Component {
         </View>
         <Text style={{padding: 20, textAlign: 'justify', fontSize: 16}}>{this.props.description}</Text>
       </View>
+
+
     )
   }
 }
