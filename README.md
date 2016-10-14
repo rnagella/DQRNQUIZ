@@ -6,6 +6,7 @@ for taking time to review my assignment.
 
 Here are few things worth noticing
 Library's
+
 - react-native -  0.34.1 to develop this project.
 - react - 15.3.2
 
@@ -31,6 +32,13 @@ based on the platform
  -->
 
 - DEMO
-Final demo of the screen cast can be viewed under movie folder as DQRNQUIZ.mov
+
+Final demo of the screen cast can be viewed under on YouTube @
+https://youtu.be/LIVxcQEEKzA
+
+- SCREENSHOTS
+Screenshots of the application can be viewed under folder screenshots
+
 - Source Code
+
 Project source code can be cloned from https://github.com/rnagella/DQRNQUIZ.git
