@@ -263,6 +263,9 @@ export default class AboutScene extends React.Component {
           {this.gridButton()}
           {this.listButton()}
         </View>
+        {/* Show data - list/grid based on user selection.
+          * The DOM will be replaced with the user selected view(list/grid).
+         */}
         {this.state.status === 'list' ? <ListScene/>: <GridScene/>}
       </View>
     );
