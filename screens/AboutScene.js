@@ -73,7 +73,7 @@ class ListScene extends React.Component {
           return (
               <View style={{flex: 1, flexDirection: 'row', }}>
                 <Image style={{flex: 0.4}} source={{uri: rowData}}></Image>
-                <Text style={{textAlign: 'justify', alignItems: 'center', flex: 0.6, padding: 10}}>{this.loremIpsum()}</Text>
+                <Text style={{textAlign: 'justify', flex: 0.6, padding: 20}}>{this.loremIpsum()}</Text>
               </View>
           );
         }}
