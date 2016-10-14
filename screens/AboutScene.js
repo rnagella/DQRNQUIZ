@@ -41,30 +41,7 @@ var data = [
 ];
 
 import ListScene from './ListSceneComponent';
-// GridView implementation
-class GridScene extends React.Component {
-  constructor(props) {
-    super(props);
-    var ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
-    this.state = {
-      dataSource: ds.cloneWithRows(data)
-    }
-  }
-  render() {
-    return (
-      // Using ListView but manipulating to display as Grid with the help of Flexbox
-      <ListView contentContainerStyle={styles.list}
-        dataSource={this.state.dataSource}
-        renderRow={(rowData) => {
-          return (
-              <Image style={styles.item} source={{uri: rowData}}></Image>
-          )
-        }}
-      >
-      </ListView>
-    )
-  };
-}
+import GridScene from './GridViewComponent';
 
 export default class AboutScene extends React.Component {
   constructor(props) {
