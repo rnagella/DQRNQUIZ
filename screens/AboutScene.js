@@ -15,7 +15,8 @@ import {
   ScrollView,
   ListView,
   Dimensions,
-  Animated
+  Animated,
+  Alert
 } from 'react-native';
 
 /* Icons */
@@ -143,7 +144,13 @@ export default class AboutScene extends React.Component {
       tintColor: Colors.navigationBarTintColor,
       renderRight() {
         return (
-          <TouchableOpacity style={{padding: 10}}><Ionicons name="ios-more" color="#fff" size={30}/>
+          <TouchableOpacity style={{padding: 10}} onPress={() => {
+            Alert.alert(
+              'More',
+              'This implementation is under construction. Stay tuned for more updates!'
+            )
+          }}
+          ><Ionicons name="ios-more" color="#fff" size={30}/>
           </TouchableOpacity>
         )
       }
@@ -166,7 +173,14 @@ export default class AboutScene extends React.Component {
   // Green Button
   leftButton() {
     return (
-      <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.button]} onPress ={() => {}}>
+      <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.button]}
+        onPress={() => {
+          Alert.alert(
+            'Message',
+            'This implementation is under construction. Stay tuned for more updates!'
+          )
+        }}
+      >
         <Text>
           <Icon name="commenting-o" color="#fff" size={24}/>
         </Text>
@@ -176,7 +190,14 @@ export default class AboutScene extends React.Component {
   // Blue Button
   rightButton() {
     return (
-      <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.userButton]} onPress = {() => {}}>
+      <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.userButton]}
+        onPress={() => {
+          Alert.alert(
+            'Follow User',
+            'This implementation is under construction. Stay tuned for more updates!'
+          )
+        }}
+      >
         <Text>
           <Icon name="user-plus" color="#fff" size={24} />
         </Text>
