@@ -8,6 +8,7 @@ import {
 import {
   Text,
   View,
+  StyleSheet
 } from 'react-native';
 import Colors from '../constants/Colors';
 
@@ -22,9 +23,17 @@ export default class ChatScene extends React.Component {
 
   render() {
     return (
-      <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}}>
+      <View style={styles.container}>
         <Text>This is Chat Scene! </Text>
       </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent:'center',
+    flex: 1
+  }
+});
