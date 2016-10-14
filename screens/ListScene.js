@@ -12,6 +12,8 @@ import {
 } from 'react-native';
 import Colors from '../constants/Colors';
 
+import ListSceneComponent from './ListSceneComponent';
+
 export default class ListScene extends React.Component {
   static route = {
     navigationBar: {
@@ -23,9 +25,7 @@ export default class ListScene extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>This is List Scene! </Text>
-      </View>
+      <ListSceneComponent/>
     );
   }
 }
