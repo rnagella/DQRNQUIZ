@@ -7,6 +7,7 @@ import {
 import {
   Text,
   View,
+  StyleSheet
 } from 'react-native';
 
 import Router from '../navigation/AppRouter';
@@ -23,13 +24,13 @@ export default class AddScene extends React.Component {
 
   render() {
     return (
-      <View style={{alignItems: 'center', justifyContent: 'center', flex: 1}} >
+      <View style={styles.container}>
         <Text> This is Follow Scene! </Text>
         <Text onPress = {this._goToAbout}> Click here to Follow Beck Martin!</Text>
       </View>
     );
   }
-
+  // Send data object to the About Scene
   _goToAbout = () => {
     this.props.navigator.push(Router.getRoute('about', {
       name: 'Beck Martin',
@@ -41,3 +42,11 @@ export default class AddScene extends React.Component {
     }));
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    alignItems: 'center',
+    justifyContent:
+    'center', flex: 1
+  }
+});
