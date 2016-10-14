@@ -24,23 +24,10 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Entypo from 'react-native-vector-icons/Entypo';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import Colors from '../constants/Colors';
-// Images for the ListView and GridView
-var data = [
-  'https://images.alphacoders.com/511/511052.jpg',
-  'https://stocklogos-pd.s3.amazonaws.com/styles/logo-medium-alt/happy_coder03.png?itok=6QM-ccu8',
-  'https://googlecreativelab.github.io/coder/assets/images/coder_projects.jpg',
-  'https://d13yacurqjgara.cloudfront.net/users/74133/screenshots/1888531/avatar-cool_1x.jpg',
-  'https://pbs.twimg.com/profile_images/378800000426619448/ad669ea2b28bfbb7087958e0f398c97e_400x400.png',
-  'https://res.cloudinary.com/hashnode/image/upload/v1452968258/uoutywnyr8bydb8ur5a6.png',
-  'https://googlecreativelab.github.io/coder-projects/projects/music_boxes/assets/images/feature_full.jpg',
-  'https://s-media-cache-ak0.pinimg.com/originals/42/84/b7/4284b7cb82d762194aa0681e55adad52.jpg',
-  'https://s-media-cache-ak0.pinimg.com/564x/82/90/d9/8290d970865c5fe811430f806ba62c2d.jpg',
-  'https://s-media-cache-ak0.pinimg.com/564x/ea/5f/82/ea5f82d43800f7a063e22fa819466d5f.jpg',
-  'https://s-media-cache-ak0.pinimg.com/736x/c2/db/31/c2db3119f44823d4072e0bc04086f806.jpg',
-  'https://s-media-cache-ak0.pinimg.com/236x/3e/84/5b/3e845b4ba7c9c3a14163ec0c334f77e9.jpg'
-];
 
+// List view Component
 import ListScene from './ListSceneComponent';
+// Grid View Component
 import GridScene from './GridViewComponent';
 
 export default class AboutScene extends React.Component {
@@ -270,17 +257,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: Colors.navigationBarBackgroundColor
-  },
-  list: {
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    flexWrap: 'wrap'
-  },
-  item: {
-    backgroundColor: '#CCC',
-    margin: 1,
-    width: (Dimensions.get('window').width/3)-3,
-    height: (Dimensions.get('window').width/3)-3
   },
   header: {
     position: 'absolute',
