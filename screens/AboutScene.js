@@ -217,7 +217,7 @@ export default class AboutScene extends React.Component {
     console.log('toggle button handler' + this.state.status);
   }
 
-  _renderScrollStaticView() {
+  _renderScrollViewFixedContent() {
       return (
           <View style={{backgroundColor: 'transparent'}}>
             <View style = {styles.stats} >
@@ -249,7 +249,7 @@ export default class AboutScene extends React.Component {
       );
     }
 
-  _renderScrollViewContent() {
+  _renderScrollViewScrollContent() {
     return (
       <View style={{marginTop: 280}} >
         <View style={{flexDirection: 'row', justifyContent: 'space-around', backgroundColor: Colors.veryLightGrey}}>
@@ -266,7 +266,7 @@ export default class AboutScene extends React.Component {
     return (
         <View style={{flex: 1}}>
           <ScrollView
-            stickyHeaderIndices={[0]}
+            // stickyHeaderIndices={[0]}
             ref={(scrollView) => { _scrollView = scrollView; }}
             automaticallyAdjustContentInsets={false}
             scrollEventThrottle={500}
@@ -274,9 +274,9 @@ export default class AboutScene extends React.Component {
             bounce={false}
             style={{flex: 1}}
           >
-          {this._renderScrollViewContent()}
+          {this._renderScrollViewScrollContent()}
           <Animated.View style={styles.header}>
-            {this._renderScrollStaticView()}
+            {this._renderScrollViewFixedContent()}
           </Animated.View>
           </ScrollView>
         </View>
