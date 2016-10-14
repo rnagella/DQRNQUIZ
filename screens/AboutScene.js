@@ -106,10 +106,10 @@ class GridScene extends React.Component {
   }
   render() {
     return (
+      // Using ListView but manipulating to display as Grid with the help of Flexbox
       <ListView contentContainerStyle={styles.list}
         dataSource={this.state.dataSource}
         renderRow={(rowData) => {
-          console.log('rowData' + rowData);
           return (
               <Image style={styles.item} source={{uri: rowData}}></Image>
           )
@@ -123,10 +123,13 @@ class GridScene extends React.Component {
 export default class AboutScene extends React.Component {
   constructor(props) {
     super(props);
+    // State to maintain the user selected choice - list/gird.
+    // Defaulted to grid
     this.state = {
       status: 'grid',
     }
   }
+  // About Scene Navigation options - Left Button, Right Button,  and Title
   static route = {
     navigationBar: {
       title(params) {
@@ -160,7 +163,7 @@ export default class AboutScene extends React.Component {
       });
     }, 1000);
   }
-
+  // Green Button
   leftButton() {
     return (
       <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.button]} onPress ={() => {}}>
@@ -170,7 +173,7 @@ export default class AboutScene extends React.Component {
       </TouchableHighlight>
     )
   }
-
+  // Blue Button
   rightButton() {
     return (
       <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.userButton]} onPress = {() => {}}>
@@ -180,7 +183,7 @@ export default class AboutScene extends React.Component {
       </TouchableHighlight>
     )
   }
-
+  // Grid Button
   gridButton() {
     return (
       <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.userButton]} onPress = {() => {
@@ -192,33 +195,31 @@ export default class AboutScene extends React.Component {
       </TouchableHighlight>
     )
   }
-
+  // List Button
   listButton() {
     console.log('list button');
     return (
-      <View>
       <TouchableHighlight underlayColor = {Colors.grey} style = {[styles.userButton]} onPress = {() => {
-        console.log('clicked list button');
         this.toggleStatus('list');
       }}>
         <Text>
           <Entypo name="list" color="#fff" size={24} />
         </Text>
       </TouchableHighlight>
-      </View>
     )
   }
-
+  // Update the state to the user selection - list/grid
   toggleStatus(value) {
     this.setState({
       status: value
     });
-    console.log('toggle button handler' + this.state.status);
   }
 
+  // View to display fixed content of ScrollView - Stats, Icons, Location, Desc ...
   _renderScrollViewFixedContent() {
       return (
           <View style={{backgroundColor: 'transparent'}}>
+            {/* Stats */}
             <View style = {styles.stats} >
               <View style = {{alignItems: 'center'}} >
                 <Text style = {{fontSize: 18, fontWeight: '500', color: Colors.midGrey}}>{this.props.posts}</Text>
@@ -233,23 +234,30 @@ export default class AboutScene extends React.Component {
                 <Text style = {{fontSize: 12}} > FOLLOWING </Text>
               </View>
             </View>
+            {/* Icons */}
             <View style={{height: 100, alignItems: 'center', justifyContent: 'space-around', flexDirection: 'row'}}>
               {this.leftButton()}
               <Icon name="user" size={102} color={Colors.midGrey}/>
               {this.rightButton()}
             </View>
+            {/* Profile Name and Location */}
             <View style = {{alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 28}} >
               <Text style={{fontSize: 18, fontWeight: '400'}}>{this.props.name}</Text>
               <Text style={{padding: 10}}> | </Text>
               <Text style={{color: Colors.navigationBarBackgroundColor, fontSize: 18}}> <Entypo name="location-pin" size={18}/>{this.props.location}</Text>
             </View>
+            {/* Description */}
             <Text style={{paddingLeft: 20, paddingRight: 20, paddingTop: 10, paddingBottom: 10, textAlign: 'justify', fontSize: 16, height: 88}}>{this.props.description}</Text>
           </View>
       );
     }
 
+  // View to display Scroll content based on User selection. ListView/GridView
+  // Defaulted to GridView
   _renderScrollViewScrollContent() {
     return (
+      // Note: marginTop is set to 280px to make the possibility of Scroll the
+      // list/grid view on top of the fixed content view of ScrollView. Come visit again
       <View style={{marginTop: 280}} >
         <View style={{flexDirection: 'row', justifyContent: 'space-around', backgroundColor: Colors.veryLightGrey}}>
           {this.gridButton()}
@@ -264,6 +272,10 @@ export default class AboutScene extends React.Component {
     return (
         <View style={{flex: 1}}>
           <ScrollView
+            // Note: With the help of stickyHeaderIndices make the Grid/List selection-view
+            // sticky when user scroll of the ScrollView
+            // But this causing the List/grid data not to scroll due to the design
+            // style of current implementation. Come visit again
             // stickyHeaderIndices={[0]}
             ref={(scrollView) => { _scrollView = scrollView; }}
             automaticallyAdjustContentInsets={false}
@@ -272,8 +284,10 @@ export default class AboutScene extends React.Component {
             bounce={false}
             style={{flex: 1}}
           >
+          {/* Render Grid/List view along with selectors */}
           {this._renderScrollViewScrollContent()}
           <Animated.View style={styles.header}>
+          {/* Render Fixed view of ScrollView - Stats, User Profile data */}
             {this._renderScrollViewFixedContent()}
           </Animated.View>
           </ScrollView>
