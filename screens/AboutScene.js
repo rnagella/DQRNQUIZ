@@ -265,9 +265,6 @@ export default class AboutScene extends React.Component {
     var _scrollView: ScrollView;
     return (
         <View style={{flex: 1}}>
-          <Animated.View style={styles.header}>
-            {this._renderScrollStaticView()}
-          </Animated.View>
           <ScrollView
             stickyHeaderIndices={[0]}
             ref={(scrollView) => { _scrollView = scrollView; }}
@@ -277,7 +274,10 @@ export default class AboutScene extends React.Component {
             bounce={false}
             style={{flex: 1}}
           >
-            {this._renderScrollViewContent()}
+          {this._renderScrollViewContent()}
+          <Animated.View style={styles.header}>
+            {this._renderScrollStaticView()}
+          </Animated.View>
           </ScrollView>
         </View>
     )
